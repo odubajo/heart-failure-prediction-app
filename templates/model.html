@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/static/model.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="/static/model.js"></script>
+  </head>
+  <body>
+  <div class="content">
+    
+    <div class="container ">
+      <div class="row align-items-stretch justify-content-center no-gutters">
+        <div class="col-md-7">
+          <div class="form h-100 contact-wrap p-5">
+            <h3 class="text-center">Model</h3>
+            <p>This is a Machine Learning App for predicting  heart failure ,The user is expected to input some values. some values have been encoded as follows: sex(male:1,female:0), RestingECG(Normal:1, ST:2, LVH:3), ExerciseAngina(NO:0,YES:1), ST_Slope(Up:1, Flat:2, Down:3), ChestPainType(ATA:1, NAP:2, ASY:3, TA:4) </p>
+            <form action="/predict" method="post">
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">age</label>
+                  <input type="number" class="form-control" name="age" id="age" placeholder="age">
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">sex</label>
+                  <input type="number" class="form-control" name="sex" id="sex"  placeholder="sex">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="budget" class="col-form-label">chest_pain_type</label>
+                  <input type="number" class="form-control" name="chest_pain_type" id="chest_pain_type" placeholder="chest_pain_type">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="budget" class="col-form-label">resting_bp</label>
+                  <input type="number" class="form-control" name="resting_bp" id="resting_bp" placeholder="resting_bp">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="budget" class="col-form-label">cholesterol</label>
+                  <input type="number" class="form-control" name="cholesterol" id="cholesterol" placeholder="cholesterol">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="colour" class="col-form-label">fasting_bs</label>
+                  <input type="number" class="form-control" name="fasting_bs" id="fasting_bs" placeholder="fasting_bs">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="restingECG" class="col-form-label">resting_ECG</label>
+                  <input type="number" class="form-control" name="resting_ECG" id="resting_ECG" placeholder="resting_ECG">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="budget" class="col-form-label">maxHR</label>
+                  <input type="number" class="form-control" name="maxHR" id="maxHR" placeholder="maxHR">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="budget" class="col-form-label">exercise_angina</label>
+                  <input type="number" class="form-control" name="exercise_angina" id="exercise_angina" placeholder="exercise_angina">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="colour" class="col-form-label">old_peak</label>
+                  <input type="number" class="form-control" name="old_peak" id="old_peak" placeholder="old_peak">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                  <label for="restingECG" class="col-form-label">ST_slope</label>
+                  <input type="number" class="form-control" name="ST_slope" id="ST_slope" placeholder="ST_slope">
+                </div>
+              </div>
+
+              <div class="row justify-content-center">
+                <div class="col-md-5 form-group text-center">
+                  <button type="submit" class="btn btn-block btn-primary  py-2 px-4">predict</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
